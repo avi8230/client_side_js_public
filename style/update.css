@@ -1,0 +1,115 @@
+* {
+    color: rgb(66, 186, 66);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    background-color: rgb(40, 40, 40);
+}
+
+form>* {
+    font-size: x-large;
+}
+
+a {
+    color: white;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="submit"],
+textarea,
+select,
+option {
+    background-color: rgb(159, 167, 159);
+    color: black;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+form :nth-child(6), form :nth-child(18) {
+    direction: rtl;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    padding: 10px;
+}
+
+#btnSubmit {
+    text-align: center;
+    width: 134px;
+    height: 55px;
+    padding: 1px;
+    border-radius: 17px;
+    line-height: 55px;
+    border: 1px solid rgb(126, 192, 126);
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 0.3s;
+    background-color: transparent;
+    color: white;
+}
+
+#btnSubmit:hover {
+    background-color: rgb(126, 192, 126);
+    color: black;
+    cursor: pointer;
+}
+
+#span_address {
+    color: whitesmoke;
+}
+
+/* The design of the navigation bar */
+header {
+    height: 5vh;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+nav {
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 19px;
+    background-color: rgb(70, 70, 70);
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    flex-grow: 1;
+    gap: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 102, 0);
+}

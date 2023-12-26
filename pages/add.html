@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word Storage - ADD</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+    <link rel="stylesheet" href="../style/add.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/add.js"></script>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav>
+            <span id="user"></span>
+            <a href="../index.html" target="_self">MyWords</a>
+            <a href="./mediaPlayer.html" target="_self">MediaPlayer</a>
+            <a href="./test.html" target="_self">Test</a>
+            <a href="./scores.html" target="_self">Scores</a>
+            <a href="./preferences.html" target="_self">Preferences</a>
+            <a href="./auth.html" target="_self">Auth</a>
+        </nav>
+    </header>
+
+    <span id="span_address"></span>
+
+    <h2>ADD</h2>
+
+    <form method="POST" enctype="multipart/form-data" id="my-form">
+
+        word
+        <span id="ifExists"></span>
+        <br>
+        <input type="text" name="word" id="word" />
+        <br><br>
+
+        wordTranslation <br>
+        <input type="text" name="wordTranslation" id="wordTranslation" />
+        <br><a id="linkTo_googleTranslate" href="https://translate.google.com/" target="_blank">Google Translate</a>
+        <br /><br />
+
+        sentence <br>
+        <textarea rows="3" cols="40" type="text" name="sentence" id="sentence"></textarea>
+        <br> <a id="linkTo_oxfor" href="https://www.oxfordlearnersdictionaries.com/" target="_blank">Oxfor</a>
+        <br> <a id="linkTo_yourDictionary" href="https://www.yourdictionary.com/" target="_blank">Your Dictionary</a>
+        <br /><br />
+
+        sentenceTranslation <br>
+        <textarea rows="3" cols="40" type="text" name="sentenceTranslation"
+            id="sentenceTranslation"></textarea><br /><br />
+
+        picture <br>
+        <input type="file" name="myImage" /><br />
+        <a id="linkTo_googleImage" href="https://www.google.co.il/imghp?hl=iw&authuser=0&ogbl" target="_blank">Google Image</a>
+
+        <br /><br />
+        <table>
+            <tr>
+                <td>
+                    language <br>
+                    <select id="languageSelector" name="language">
+                    </select>
+                </td>
+                <td>
+                    voice <br>
+                    <select id="voiceSelector" name="voice">
+                    </select>
+                </td>
+                <td>
+                    <!-- highQuality -->
+                    <input type="checkbox" id="highQuality" name="highQuality" value="1">
+                    <label for="highQuality">highQuality</label>
+                    <br>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <input type="submit" value="ADD" id="btnSubmit" />
+    </form>
+    <span id="output"></span>
+    <br><br>
+    <a href="../index.html">MyWords</a>
+
+</body>
+
+</html>

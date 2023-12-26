@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Open+Sans&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../style/test.css">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav>
+            <span id="user"></span>
+            <a href="../index.html" target="_self">MyWords</a>
+            <a href="./mediaPlayer.html" target="_self">MediaPlayer</a>
+            <a href="./test.html" target="_self">Test</a>
+            <a href="./scores.html" target="_self">Scores</a>
+            <a href="./preferences.html" target="_self">Preferences</a>
+            <a href="./auth.html" target="_self">Auth</a>
+        </nav>
+    </header>
+
+    <span id="span_address"></span>
+
+    <audio></audio>
+
+    <div id="settings">
+        <div id="score">
+            <div>
+                <span>Download words with score:</span>
+            </div>
+            <div id="fromTo">
+                <label for="scoreSelector_from">from</label>
+                <select id="scoreSelector_from"></select>
+                <label for="scoreSelector_to">to</label>
+                <select id="scoreSelector_to"></select>
+                <div id="sumOfWords"></div>
+            </div>
+            <div>
+                <button id="downloadBtn">Download</button>
+            </div>
+        </div>
+        <div id="rate">
+            <div>
+                <label for="rateSelector">Speed</label>
+            </div>
+            <div>
+                <select id="rateSelector"></select>
+            </div>
+        </div>
+    </div>
+
+    <div id="testScore">
+        <table id="scoreTable">
+            <tr>
+                <td><i class="fa-solid fa-arrow-down"></i></td>
+                <td class="numWords" id="tableTitle"></td>
+                <td><i class="fa-solid fa-arrow-up"></i></td>
+            </tr>
+            <tr>
+                <td id="down">0</td>
+                <td class="numWords">0</td>
+                <td id="up">0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="cardsContainer">
+
+        <!-- <div class="scene">
+            <div class="card">
+                <div class="front">
+                    <div class="border">
+                        <div class="number">1</div>
+                        <div class="frontWord" onclick="playAudio('33w.wav')">word</div>
+                    </div>
+                    <div class="answerBtn"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                </div>
+                <div class="back">
+                    <div class="answer">
+                        <div class="backWord" onclick="playAudio('33w.wav')">word</div>
+                        <div class="wordTranslation">wordTranslation</div>
+                        <div class="sentence" onclick="playAudio('33w.wav')">sentence</div>
+                        <div class="sentenceTranslation">sentenceTranslation</div>
+                        <div class="img"><img src="../assets/noImage.jpg" alt=""></div>
+                    </div>
+                    <div class="buttons">
+                        <div class="xBtn"><i class="fa-solid fa-x"></i></div>
+                        <div class="scoreBtn">100</div>
+                        <div class="wBtn"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/test.js"></script>
+</body>
+
+</html>

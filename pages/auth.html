@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Word Storage - Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Open+Sans&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="../style/auth.css">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../scripts/auth.js"></script>
+    <!--  -->
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav>
+            <span id="user"></span>
+            <a href="../index.html" target="_self">MyWords</a>
+            <a href="./mediaPlayer.html" target="_self">MediaPlayer</a>
+            <a href="./test.html" target="_self">Test</a>
+            <a href="./scores.html" target="_self">Scores</a>
+            <a href="./preferences.html" target="_self">Preferences</a>
+            <a href="./auth.html" target="_self">Auth</a>
+        </nav>
+    </header>
+
+    <span id="span_address"></span>
+
+    <div class="container">
+        <!-- -------------------------- -->
+        <div class="containerChild1">
+            <h2>Register</h2>
+            <form id="formRegister">
+                <input type="text" id="textBoxEmail" placeholder="Email...">
+                <br><br>
+                <button>Register</button>
+            </form>
+            <br>
+            <div id="outputRegister">
+                <span id="outputRegister_1"></span>
+            </div>
+        </div>
+        <!-- -------------------------- -->
+        <div class="containerChild2">
+            <h2>Login</h2>
+            <form id="formLogin">
+                <input type="text" id="textBoxUsername" placeholder="Username..." autofocus>
+                <br>
+                <input type="password" id="textBoxPassword" placeholder="Password...">
+                <br>
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Keep me logged-in for 90 days / 2 hours.</label>
+                <br><br>
+                <button>Login</button>
+            </form>
+            <div id="outputLogin">
+                <span id="outputLogin_1"></span>
+            </div>
+            <br>
+            <a href="../index.html">Go-To MyWords</a>
+            <!-- <a href="../index.html" target="_blank">go to My Word</a> -->
+        </div>
+        <!-- -------------------------- -->
+        <div class="containerChild3">
+            <h2>Logout</h2>
+            <button onclick="logout()" style="width: 150px;">Logout</button>
+            <br><br>
+            <span id="outputLogout"></span>
+        </div>
+        <!-- -------------------------- -->
+        <div class="containerChild4">
+            <h2>Password Reset</h2>
+            <form id="formPasswordResetStepOne">
+                Enter your email:
+                <input type="text" id="textBoxEmailReset" placeholder="Email ...">
+                <br>
+                <button>Send</button><br>
+                <div class="outputPasswordReset">
+                    <span id="outputPasswordResetStepOne"></span>
+                </div>
+            </form>
+            <form id="formPasswordResetStepTwo"><br>
+                Enter the temporary password:
+                <input type="password" id="textBoxPasswordReset" placeholder="Temporary Password ...">
+                <br>
+                <button>Send</button>
+                <div class="outputPasswordReset">
+                    <span id="outputPasswordResetStepTow"></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

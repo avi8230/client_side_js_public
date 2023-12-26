@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/preferences.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/preferences.js"></script>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav>
+            <span id="user"></span>
+            <a href="../index.html" target="_self">MyWords</a>
+            <a href="./mediaPlayer.html" target="_self">MediaPlayer</a>
+            <a href="./test.html" target="_self">Test</a>
+            <a href="./scores.html" target="_self">Scores</a>
+            <a href="./preferences.html" target="_self">Preferences</a>
+            <a href="./auth.html" target="_self">Auth</a>
+        </nav>
+    </header>
+
+    <span id="span_address"></span>
+
+    <form action="" id="preferencesForm">
+        <div id="container">
+            <h1>Preferences</h1>
+            <div class="inputDiv">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+            </div>
+            <div class="inputDiv">
+                <label for="password">Password:</label><br>
+                <input type="text" id="password" name="password">
+            </div>
+            <div class="inputDiv">
+                <p>Text Direction:</p>
+                <input type="radio" id="ltr1" name="textDirection" value="ltr">
+                <label for="ltr1">Left to right</label><br>
+                <input type="radio" id="rtl1" name="textDirection" value="rtl">
+                <label for="rtl1">Right to left</label><br>
+            </div>
+            <div class="inputDiv">
+                <p>Text Direction Translation:</p>
+                <input type="radio" id="ltr2" name="textDirectionTranslation" value="ltr">
+                <label for="ltr2">Left to right</label><br>
+                <input type="radio" id="rtl2" name="textDirectionTranslation" value="rtl">
+                <label for="rtl2">Right to left</label><br>
+            </div>
+            <div class="inputDiv">
+                <label for="rateSpeech">Rate Speech:</label>
+                <select name="rateSpeech" id="rateSpeech"></select>
+            </div>
+            <div class="inputDiv">
+                <label for="language">Language:</label>
+                <select name="language" id="language"></select>
+            </div>
+            <div class="inputDiv">
+                <label for="voice">Voice:</label>
+                <select name="voice" id="voice"></select>
+            </div>
+            <div class="inputDiv">
+                <p>High Quality:</p>
+                <input type="radio" id="1" name="highQuality" value="1">
+                <label for="1">yes</label><br>
+                <input type="radio" id="0" name="highQuality" value="0">
+                <label for="0">no</label><br>
+            </div>
+            <div class="submitDiv">
+                <div id="submit">
+                    <input type="submit" value="SUBMIT">
+                </div>
+            </div>
+            <div class="inputDiv">
+                <div id="outputDiv">
+                    <span id="output"></span>
+                </div>
+            </div>
+            <a href="../index.html">MyWords</a>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#span_address {
+    color: white;
+    display: table;
+    margin: auto;
+    margin-bottom: 3px;
+}
+
+table,
+th,
+td {
+    border: 5px solid black;
+    border-radius: 20px;
+    border-collapse: collapse;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+th,
+td {
+    min-width: 50px;
+    font-size: 18px;
+}
+
+th:nth-child(1) {
+    background-color: rgb(238, 205, 143);
+}
+
+th:nth-child(2) {
+    background-color: rgb(168, 168, 235);
+}
+
+td:nth-child(1) {
+    background-color: rgb(255, 235, 197);
+}
+
+td:nth-child(2) {
+    background-color: rgb(206, 206, 243);
+}
+
+#th_total {
+    background-color: rgb(168, 168, 235);
+}
+
+#td_total {
+    background-color: rgb(206, 206, 243);
+}
+
+#transparent{
+    background-color: black;
+}
+
+#th_total,
+#td_total {
+    font-size: 25px;
+}
+
+/* The design of the navigation bar */
+header {
+    height: 5vh;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+nav {
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 19px;
+    background-color: rgb(70, 70, 70);
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 8px;
+
+    flex-grow: 1;
+    gap: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 102, 0);
+}

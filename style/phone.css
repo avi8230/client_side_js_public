@@ -1,0 +1,404 @@
+/* layout - אתר ----------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* layout - אב -------------------- */
+body {
+    margin: 0;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+/* layout - בן -------------------- */
+.container {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    max-width: 1900px;
+    margin: auto;
+}
+
+/* layout - נכדים -------------------- */
+header {
+    height: 5vh;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+}
+
+footer {
+    height: 3vh;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+/* layout - נינים -------------------- */
+.logo,
+nav,
+.login {
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 19px;
+    background-color: rgb(70, 70, 70);
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav,
+.login {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.logo {
+    flex-basis: 205px;
+    font-size: 22px;
+}
+
+nav {
+    flex-grow: 1;
+    gap: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 102, 0);
+}
+
+.login {
+    flex-basis: 150px;
+}
+
+/* -- */
+.contactUs,
+.rights {
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 19px;
+    background-color: rgb(70, 70, 70);
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.contactUs {
+    flex-grow: 2;
+}
+
+.rights {
+    flex-grow: 1;
+}
+
+/* -- */
+aside {
+    min-width: 160px;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 20px;
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add {
+    text-align: center;
+    width: 134px;
+    height: 55px;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: rgb(121, 121, 121);
+    line-height: 55px;
+    border: 1px solid rgb(155, 155, 155);
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background-color: rgb(255, 102, 0);
+    color: black;
+    cursor: pointer;
+}
+
+/* -- */
+#mainWords {
+    flex-grow: 1;
+    border-radius: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    height: 92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-height: 620px) {
+    header {
+        min-height: 31px;
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: rgb(40, 40, 40);
+    }
+
+    main {
+        margin-top: 31px;
+    }
+
+    #mainWords {
+        height: 560px;
+    }
+
+    footer {
+        min-height: 20px;
+    }
+}
+
+/* רוחב */
+/* @media only screen and (max-width: 675px) {
+
+    header {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    main {
+        margin-top: 77.33px;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+
+    aside {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        z-index: 1;
+    }
+
+    #mainWords {
+        margin-top: 42px;
+    }
+
+    footer {
+        min-height: 40px;
+        flex-direction: column;
+        gap: 0;
+    }
+} */
+
+/* wordContainer - אב ----------------------------------------------------------------------- */
+.wordContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    width: 250px;
+    font-family: sans-serif;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+/* wordContainer - בנים -------------------- */
+.wordContainer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- */
+.data {
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px dashed rgb(155, 155, 155);
+}
+
+.audioAndText {
+    flex-grow: 1;
+    font-size: 23px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.picture {
+    justify-content: center;
+    align-items: center;
+}
+
+/* wordContainer - נכדים -------------------- */
+.data>div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.audioAndText>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.divWord {
+    letter-spacing: 3px;
+    word-spacing: 1px;
+}
+
+.divSentence {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+img {
+    max-width: 200px;
+    max-height: 171px;
+    border-radius: 4px;
+}
+
+.numbers,
+.announcer,
+.date {
+    flex-grow: 1;
+    background-color: rgb(70, 70, 70);
+    border-radius: 15px;
+    padding: 3px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.date {
+    background-color: rgb(29, 63, 97);
+}
+
+/* wordContainer - נינים -------------------- */
+.audioAndText>div>div:nth-child(1),
+.audioAndText>div>div:nth-child(2) {
+    padding: 0 5px;
+    text-align: center;
+}
+
+.speechWord,
+.speechSentence {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgb(160, 160, 160);
+}
+
+.parentSpeechWord,
+.parentSpeechSentence {
+    padding: 0 10px;
+    border-top: 1px dashed rgb(155, 155, 155);
+}
+
+audio {
+    border: none;
+    height: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgb(160, 160, 160);
+}
+
+.word,
+.sentence {
+    border-bottom: 1px dashed rgb(155, 155, 155);
+    transition: 0.3s;
+}
+
+.word:hover,
+.sentence:hover {
+    cursor: pointer;
+}
+
+.update,
+.delete {
+    padding: 1px;
+    border-radius: 3px;
+    flex-grow: 1;
+}
+
+.update {
+    background-color: darkgreen;
+}
+
+.update:hover {
+    background-color: rgb(158, 218, 158);
+    color: black;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: crimson;
+}
+
+.delete:hover {
+    background-color: rgb(253, 163, 163);
+    color: black;
+    cursor: pointer;
+}
+
+.score {
+    border: 1px solid yellow;
+    border-radius: 20px;
+}
+
+/* פס גלילה ------------------------------------------------------------ */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(40, 40, 40);
+    border-radius: 10px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 70, 70);
+    border-radius: 10px;
+    border: 2px solid rgb(155, 155, 155);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(70, 70, 70);
+}
+
+/* ------------------------------------------------------------ */
+#user{
+    color: rgb(255, 255, 0);
+    font-weight: normal;
+}

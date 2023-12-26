@@ -1,0 +1,412 @@
+body {
+    /* background-color: rgb(0, 0, 0); */
+    background: repeating-linear-gradient(45deg,
+            black,
+            black 10px,
+            #444 10px,
+            #444 11px);
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* container --------------------------------------------- */
+#container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 8px;
+}
+
+#mediaPlayer,
+#playlist,
+#settings {
+    height: 500px;
+    width: 300px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 9px 9px 0 0;
+}
+
+#buttons {
+    background-color: rgb(30, 30, 30);
+    margin-top: 500px;
+    width: 300px;
+    min-height: 35px;
+    display: flex;
+    border-radius: 0 0 9px 9px;
+}
+
+/* --- */
+#labelButtons,
+#controlButtons {
+    flex-grow: 1;
+    display: flex;
+    color: rgb(171, 171, 171);
+}
+
+#labelButtons {
+    padding-left: 7px;
+    padding-right: 4px;
+}
+
+#controlButtons {
+    padding-left: 4px;
+    padding-right: 7px;
+}
+
+#labelButtons>div,
+#controlButtons>div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#play,
+#pause {
+    width: 8px;
+}
+
+#settingsButton {
+    color: white;
+}
+
+#controlButtons>div:hover {
+    color: white;
+}
+
+/* --- */
+#number {
+    color: rgb(213, 213, 213);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 60px;
+}
+
+
+/* mediaPlayer --------------------------------------------- */
+#mediaPlayer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+/* --- */
+#image_MediaPlayer {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(166, 166, 166);
+    border-radius: 8px;
+}
+
+#textAndTranslation_MediaPlayer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* --- */
+#img {
+    max-height: 170px;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+#text_MediaPlayer,
+#translation_MediaPlayer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(213, 213, 213);
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+#translation_MediaPlayer {
+    cursor: pointer;
+}
+
+#text_MediaPlayer {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    border-radius: 8px;
+}
+
+/* playlist --------------------------------------------- */
+#playlist {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: auto;
+}
+
+.itemInList {
+    display: flex;
+    min-height: 60px;
+    border-bottom: 1px solid rgb(166, 166, 166);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- */
+.image_Playlist {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_Playlist img {
+    max-height: 60px;
+    max-width: 60px;
+    border-radius: 5px;
+}
+
+.text_Playlist {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: rgb(213, 213, 213);
+    font-size: 22px;
+    letter-spacing: 1px;
+
+    border-left: 1px solid rgb(166, 166, 166);
+    border-right: 1px solid rgb(166, 166, 166);
+    border-radius: 10px;
+}
+
+.number_Playlist {
+    min-width: 35px;
+    color: rgb(213, 213, 213);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* settings --------------------------------------------- */
+#settings {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: rgb(213, 213, 213);
+}
+
+#settings>div {
+    border-radius: 10px;
+    display: flex;
+    flex-grow: 1;
+}
+
+#score {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sort {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#rate {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sleepTimer {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#shuffleAndRepeat {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa-repeat,
+.fa-shuffle {
+    font-size: 22px;
+}
+
+.fa-repeat:hover,
+.fa-shuffle:hover {
+    transition: 0.3s;
+    color: white;
+}
+
+/* --- */
+#fromTo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sumOfWords {
+    text-align: center;
+    min-width: 40px;
+    font-size: 15px;
+}
+
+#scoreSelector_from,
+#scoreSelector_to,
+#sortSelector,
+#rateSelector {
+    background-color: rgb(45, 45, 45);
+    color: rgb(213, 213, 213);
+    border: 2px solid rgb(171, 171, 171);
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 7px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+#scoreSelector_from:hover,
+#scoreSelector_to:hover,
+#sortSelector:hover,
+#rateSelector:hover {
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+}
+
+#downloadBtn {
+    background-color: transparent;
+    color: rgb(213, 213, 213);
+    border-radius: 10px;
+    border: 2px solid rgb(171, 171, 171);
+    padding: 7px 9px;
+    margin-top: 1px;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#downloadBtn:hover {
+    cursor: pointer;
+    /* background-color: rgb(0, 0, 0); */
+    /* color: white; */
+    border: 2px solid white;
+}
+
+input[type="number"] {
+    width: 60px;
+    margin: 0 7px;
+    font-size: 15px;
+    background-color: transparent;
+    color: rgb(213, 213, 213);
+    border-radius: 10px;
+    border: 2px solid rgb(171, 171, 171);
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+input[type="number"]:hover {
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+}
+
+#repeat,
+#shuffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    color: rgb(171, 171, 171);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* פס גלילה --------------------------------------------- */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(120, 120, 120);
+    border-radius: 10px;
+    /* border: 2px solid rgb(34, 34, 34); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(205, 205, 205);
+}
+
+/* --------------------------------------------- */
+a {
+    color: rgb(113, 113, 113);
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 13px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(180, 180, 180);
+}
+
+/* The design of the navigation bar */
+header {
+    height: 5vh;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+nav {
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 19px;
+    background-color: rgb(70, 70, 70);
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 9px;
+
+    flex-grow: 1;
+    gap: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 102, 0);
+}

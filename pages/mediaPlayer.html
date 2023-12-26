@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaPlayer - WordStorage</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Open+Sans&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style/mediaPlayer.css" />
+
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav>
+            <span id="user"></span>
+            <a href="../index.html" target="_self">MyWords</a>
+            <a href="./mediaPlayer.html" target="_self">MediaPlayer</a>
+            <a href="./test.html" target="_self">Test</a>
+            <a href="./scores.html" target="_self">Scores</a>
+            <a href="./preferences.html" target="_self">Preferences</a>
+            <a href="./auth.html" target="_self">Auth</a>
+        </nav>
+    </header>
+
+    <span id="span_address" style="color: white;"></span>
+
+    <div id="container">
+        <!---------------------------------------------------------->
+        <div id="mediaPlayer">
+            <div id="image_MediaPlayer">
+                <img id="img" src="../assets/noImage.jpg" alt="image">
+            </div>
+            <div id="textAndTranslation_MediaPlayer">
+                <div id="text_MediaPlayer"></div>
+                <div id="translation_MediaPlayer"></div>
+            </div>
+        </div>
+        <!---------------------------------------------------------->
+        <div id="playlist"></div>
+        <!---------------------------------------------------------->
+        <div id="settings">
+            <div id="score">
+                <div>
+                    <span>Download words with score</span>
+                </div>
+                <div id="fromTo">
+                    <label for="scoreSelector_from">from</label>
+                    <select id="scoreSelector_from"></select>
+                    <label for="scoreSelector_to">to</label>
+                    <select id="scoreSelector_to"></select>
+                    <div id="sumOfWords"></div>
+                </div>
+                <div>
+                    <button id="downloadBtn">Download</button>
+                </div>
+            </div>
+            <div id="sort">
+                <div>
+                    <label for="sortSelector">Sort by</label>
+                </div>
+                <div>
+                    <select id="sortSelector">
+                        <option value="date">Date</option>
+                        <option value="alphabetically">Alphabet</option>
+                    </select>
+                </div>
+            </div>
+            <div id="sleepTimer">
+                <div>
+                    <label for="sleepInput">Sleep Timer</label>
+                </div>
+                <div>
+                    <input type="number" id="sleepInput" min="1"><span>minutes</span>
+                </div>
+            </div>
+            <div id="rate">
+                <div>
+                    <label for="rateSelector">Speed</label>
+                </div>
+                <div>
+                    <select id="rateSelector"></select>
+                </div>
+            </div>
+            <div id="shuffleAndRepeat">
+                <div>
+                    <div>Shuffle</div>
+                    <div id="shuffle"><i class="fa-solid fa-shuffle"></i></div>
+                </div>
+                <div>
+                    <div>Repeat 3 times</div>
+                    <div id="repeat"><i class="fa-solid fa-repeat"></i></div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------->
+        <div id="buttons">
+            <div id="labelButtons">
+                <div id="mediaPlayerButton"><i class="fa-solid fa-music"></i></div>
+                <div id="listButton"><i class="fa-solid fa-list"></i></div>
+                <div id="settingsButton"><i class="fa-solid fa-gear"></i></div>
+            </div>
+            <div id="number"></div>
+            <div id="controlButtons">
+                <div id="prev"><i class="fa-solid fa-backward-step"></i></div>
+                <div id="play"><i class="fa-solid fa-play"></i></div>
+                <div id="pause" style="display: none;"><i class="fa-solid fa-pause"></i></div>
+                <div id="next"><i class="fa-solid fa-forward-step"></i></div>
+            </div>
+            <audio id="audio" preload="metadata"></audio>
+        </div>
+    </div>
+
+    <a href="../index.html">MyWords</a>
+
+    <!-- Script -->
+    <script src="../scripts/mediaPlayer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
